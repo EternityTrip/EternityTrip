@@ -5699,7 +5699,7 @@ client:Element("ToggleColor", "hitmarker", {default = {Color = COL3RGB(255,255,2
 						TextLabel.Position = UDim2.new(0, 0, -0.055555556, 0)
 						TextLabel.Size = UDim2.new(0, 16, 0, 18)
 						TextLabel.Font = Enum.Font.SourceSans
-						TextLabel.Text = "C"
+						TextLabel.Text = "E"
 						TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 						TextLabel.TextSize = 14.000
 						TextLabel.TextStrokeTransparency = 0.000
@@ -5710,8 +5710,8 @@ client:Element("ToggleColor", "hitmarker", {default = {Color = COL3RGB(255,255,2
 						TextLabel_2.Position = UDim2.new(0.02610966, 0, -0.055555556, 0)
 						TextLabel_2.Size = UDim2.new(0, 12, 0, 18)
 						TextLabel_2.Font = Enum.Font.SourceSans
-						TextLabel_2.Text = "W"
-						TextLabel_2.TextColor3 = Color3.fromRGB(179, 9, 9)
+						TextLabel_2.Text = "T"
+						TextLabel_2.TextColor3 = Color3.fromRGB(18, 20, 12)
 						TextLabel_2.TextSize = 14.000
 						TextLabel_2.TextStrokeTransparency = 0.000
 						
