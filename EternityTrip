@@ -69,6 +69,8 @@ local function deepCopy(original)
 		end      
 		copy[k] = v      
 	end      
+	return copy      
+end      
 function library:ConfigFix(cfg)      
 	local copy = game:GetService("HttpService"):JSONDecode(readfile(cfglocation..cfg..".txt"))      
 	for i,Tabs in pairs(copy) do      
@@ -1447,7 +1449,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                             Color.Size = UDIM2(0, 8, 0, 8) 
     
                             TextLabel.Parent = Button 
-                            TextLabel.BackgroundColor3 = COL3RGB(107, 1, 1) 
+                            TextLabel.BackgroundColor3 = COL3RGB(18, 20, 128) 
                             TextLabel.BackgroundTransparency = 1.000 
                             TextLabel.Position = UDIM2(0, 32, 0, -1) 
                             TextLabel.Size = UDIM2(0.111913361, 208, 1, 0) 
@@ -1459,8 +1461,8 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
     
                             local function update() 
                                 if Element.value.Toggle then 
-                                    tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(107, 1, 1)}) 
-                                    library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(107, 1, 1)}) 
+                                    tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(18, 20, 128)}) 
+                                    library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(18, 20, 128)}) 
                                 else 
                                     tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(20, 20, 20)}) 
                                     library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(200, 200, 200)}) 
@@ -1765,7 +1767,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                             Button.TextSize = 12.750
     
                             TextLabel.Parent = Button 
-                            TextLabel.BackgroundColor3 = COL3RGB(107, 1, 1)
+                            TextLabel.BackgroundColor3 = COL3RGB(18, 20, 128)
                             TextLabel.BackgroundTransparency = 1.000 
                             TextLabel.BorderColor3 = COL3RGB(30, 30, 30) 
                             TextLabel.Position = UDIM2(0, 5, 0, 0) 
@@ -1793,7 +1795,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                             Drop.TopImage = "http://www.roblox.com/asset/?id=6724808282" 
                             Drop.AutomaticCanvasSize = "Y" 
                             Drop.ZIndex = 5 
-                            Drop.ScrollBarImageColor3 = COL3RGB(107, 1, 1)
+                            Drop.ScrollBarImageColor3 = COL3RGB(18, 20, 128)
     
                             UIListLayout.Parent = Drop 
                             UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center 
@@ -1827,7 +1829,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                                     Button.ZIndex = 6 
     
                                     TextLabel.Parent = Button 
-                                    TextLabel.BackgroundColor3 = COL3RGB(107, 1, 1) 
+                                    TextLabel.BackgroundColor3 = COL3RGB(18, 20, 128) 
                                     TextLabel.BackgroundTransparency = 1.000 
                                     TextLabel.BorderColor3 = COL3RGB(30, 30, 30) 
                                     TextLabel.Position = UDIM2(0, 5, 0, -1) 
@@ -1848,7 +1850,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                                         Drop.CanvasPosition = Vec2(0,0) 
                                     end) 
                                     Button.MouseEnter:Connect(function() 
-                                        library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 =  COL3RGB(107, 1, 1)}) 
+                                        library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 =  COL3RGB(18, 20, 128)}) 
                                     end) 
                                     Button.MouseLeave:Connect(function() 
                                         library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 =  COL3RGB(200, 200, 200)}) 
@@ -1958,7 +1960,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                             Frame.BorderSizePixel = 0 
                             Frame.Size = UDIM2(0.5, 0, 1, 0) 
     
-                            UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, COL3RGB(107, 1, 1)), ColorSequenceKeypoint.new(1, COL3RGB(107, 1, 1))} 
+                            UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, COL3RGB(18, 20, 128)), ColorSequenceKeypoint.new(1, COL3RGB(18, 20, 128))} 
                             UIGradient.Rotation = 90 
                             UIGradient.Parent = Frame 
     
@@ -2054,7 +2056,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                             Button_2.TextSize = 12.750
     
                             TextLabel.Parent = Button_2 
-                            TextLabel.BackgroundColor3 = COL3RGB(107, 1, 1)
+                            TextLabel.BackgroundColor3 = COL3RGB(18, 20, 128)
                             TextLabel.BackgroundTransparency = 1.000 
                             TextLabel.BorderColor3 = COL3RGB(30, 30, 30) 
                             TextLabel.Size = UDIM2(1, 0, 1, 0) 
@@ -2067,12 +2069,12 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                             end 
     
                             Button_2.MouseButton1Down:Connect(function() 
-                                TextLabel.TextColor3 = COL3RGB(107, 1, 1)
+                                TextLabel.TextColor3 = COL3RGB(18, 20, 128)
                                 library:Tween(TextLabel, TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(200, 200, 200)}) 
                                 callback() 
                             end) 
                             Button_2.MouseEnter:Connect(function() 
-                                library:Tween(TextLabel, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(107, 1, 1)}) 
+                                library:Tween(TextLabel, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(18, 20, 128)}) 
                             end) 
                             Button_2.MouseLeave:Connect(function() 
                                 library:Tween(TextLabel, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(200, 200, 200)}) 
@@ -2216,7 +2218,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                         local TextLabel = INST("TextLabel") 
     
                         TextLabel.Parent = Button 
-                        TextLabel.BackgroundColor3 = COL3RGB(107, 1, 1)
+                        TextLabel.BackgroundColor3 = COL3RGB(18, 20, 128)
                         TextLabel.BackgroundTransparency = 1.000 
                         TextLabel.BorderColor3 = COL3RGB(30, 30, 30) 
                         TextLabel.Position = UDIM2(0, 5, 0, 0) 
@@ -2244,7 +2246,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                         Drop.MidImage = "http://www.roblox.com/asset/?id=6724808282" 
                         Drop.AutomaticCanvasSize = "Y" 
                         Drop.ZIndex = 5 
-                        Drop.ScrollBarImageColor3 = COL3RGB(107, 1, 1)
+                        Drop.ScrollBarImageColor3 = COL3RGB(18, 20, 128)
     
                         UIListLayout.Parent = Drop 
                         UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center 
@@ -2310,7 +2312,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                                     callback(Element.value)      
                                 end)      
                                 Button.MouseEnter:Connect(function()      
-                                    library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 =  COL3RGB(107, 1, 1)})      
+                                    library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 =  COL3RGB(18, 20, 128)})      
                                 end)      
                                 Button.MouseLeave:Connect(function()      
                                     library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 =  COL3RGB(200, 200, 200)})      
@@ -2346,7 +2348,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                                 Frame.ScrollBarThickness = 4      
                                 Frame.TopImage = "http://www.roblox.com/asset/?id=6724808282"      
                                 Frame.AutomaticCanvasSize = "Y"      
-                                Frame.ScrollBarImageColor3 = COL3RGB(107, 1, 1)      
+                                Frame.ScrollBarImageColor3 = COL3RGB(18, 20, 128)      
     
                                 UIListLayout.Parent = Frame      
                                 UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center      
@@ -2370,7 +2372,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                                     Button.TextSize = 12.750   
     
                                     TextLabel.Parent = Button      
-                                    TextLabel.BackgroundColor3 = COL3RGB(107, 1, 1)     
+                                    TextLabel.BackgroundColor3 = COL3RGB(18, 20, 128)     
                                     TextLabel.BackgroundTransparency = 1.000      
                                     TextLabel.BorderColor3 = COL3RGB(30, 30, 30)      
                                     TextLabel.Position = UDIM2(0, 4, 0, -1)      
@@ -2393,7 +2395,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                                             end      
                                         end      
     
-                                        library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(107, 1, 1)})      
+                                        library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(18, 20, 128)})      
     
                                         Element.value.Scroll[joell] = v      
     
@@ -2402,7 +2404,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                                     end)      
                                     Button.MouseEnter:Connect(function()      
                                         if Element.value.Scroll[joell] ~= v then      
-                                            library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(107, 1, 1)})      
+                                            library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(18, 20, 128)})      
                                         end      
                                     end)      
                                     Button.MouseLeave:Connect(function()      
@@ -2477,7 +2479,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                                         if bad:IsA("TextButton") then      
                                             bad.TextLabel.TextColor3 = COL3RGB(200, 200, 200)      
                                             if bad.Name == Element.value.Scroll[v.Name] then      
-                                                bad.TextLabel.TextColor3 = COL3RGB(107, 1, 1)     
+                                                bad.TextLabel.TextColor3 = COL3RGB(18, 20, 128)     
                                             end      
                                         end      
                                     end      
@@ -2526,7 +2528,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                         Frame.ScrollBarThickness = 4      
                         Frame.TopImage = "http://www.roblox.com/asset/?id=6724808282"      
                         Frame.AutomaticCanvasSize = "Y"      
-                        Frame.ScrollBarImageColor3 = COL3RGB(107, 1, 1)     
+                        Frame.ScrollBarImageColor3 = COL3RGB(18, 20, 128)     
     
                         UIListLayout.Parent = Frame      
                         UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center      
@@ -2572,7 +2574,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                                     end      
                                 end      
     
-                                library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(107, 1, 1)})      
+                                library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(18, 20, 128)})      
     
                                 Element.value.Scroll = v      
     
@@ -2581,7 +2583,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                             end)      
                             Button.MouseEnter:Connect(function()      
                                 if Element.value.Scroll ~= v then      
-                                    library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(107, 1, 1)})      
+                                    library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(18, 20, 128)})      
                                 end      
                             end)      
                             Button.MouseLeave:Connect(function()      
@@ -2600,7 +2602,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                                 end      
                             end      
     
-                            library:Tween(Frame[Element.value.Scroll].TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(107, 1, 1)})      
+                            library:Tween(Frame[Element.value.Scroll].TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(18, 20, 128)})      
                             values[tabname][sectorname][text] = Element.value      
                             callback(Element.value)      
                         end      
@@ -2671,7 +2673,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                             Drop.CanvasSize = Drop.CanvasSize + UDIM2(0, 0, 0, 17)      
                         end      
                         Drop.ZIndex = 5      
-                        Drop.ScrollBarImageColor3 = COL3RGB(107, 1, 1)   
+                        Drop.ScrollBarImageColor3 = COL3RGB(18, 20, 128)   
     
                         UIListLayout.Parent = Drop      
                         UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center      
@@ -2764,7 +2766,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                                         library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})      
                                     else      
                                         INSERT(Element.value.Jumbobox, v)      
-                                        library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(107, 1, 1)})      
+                                        library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(18, 20, 128)})      
                                     end      
                                     updatetext()      
     
@@ -2773,7 +2775,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                                 end)      
                                 Button.MouseEnter:Connect(function()      
                                     if not TBLFIND(Element.value.Jumbobox, v) then      
-                                        library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(107, 1, 1)})      
+                                        library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(18, 20, 128)})      
                                     end      
                                 end)      
                                 Button.MouseLeave:Connect(function()      
@@ -2790,7 +2792,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                             for i,v in pairs(Drop:GetChildren()) do      
                                 if v.Name ~= "UIListLayout" then      
                                     if TBLFIND(val.Jumbobox, v.Name) then      
-                                        v.TextLabel.TextColor3 = COL3RGB(107, 1, 1)     
+                                        v.TextLabel.TextColor3 = COL3RGB(18, 20, 128)     
                                     else      
                                         v.TextLabel.TextColor3 = COL3RGB(200, 200, 200)      
                                     end      
@@ -2895,7 +2897,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
     
                         local function update()      
                             if Element.value.Toggle then      
-                                tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(107, 1, 1)})      
+                                tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(18, 20, 128)})      
                                 library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})      
                             else      
                                 keybindremove(text)      
@@ -2959,7 +2961,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                             Always.AutoButtonColor = false      
                             Always.Font = Enum.Font.GothamBold      
                             Always.Text = "Always"      
-                            Always.TextColor3 = COL3RGB(107, 1, 1)     
+                            Always.TextColor3 = COL3RGB(18, 20, 128)     
                             Always.TextSize = 12.750    
                             Always.ZIndex = 3      
     
@@ -3014,12 +3016,12 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                                             end      
                                         end      
                                         button.Font = Enum.Font.GothamBold      
-                                        button.TextColor3 = COL3RGB(107, 1, 1)     
+                                        button.TextColor3 = COL3RGB(18, 20, 128)     
                                         values[tabname][sectorname][text] = Element.value      
                                     end)      
                                     button.MouseEnter:Connect(function()      
                                         if Element.value.Type ~= button.Text then      
-                                            library:Tween(button, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(107, 1, 1)})      
+                                            library:Tween(button, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(18, 20, 128)})      
                                         end      
                                     end)      
                                     button.MouseLeave:Connect(function()      
@@ -3205,7 +3207,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
     
                         local function update()      
                             if Element.value.Toggle then      
-                                tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(107, 1, 1)})      
+                                tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(18, 20, 128)})      
                                 library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})      
                             else      
                                 tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(20, 20, 20)})      
@@ -3275,7 +3277,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
     
                         local function update()      
                             if Element.value.Toggle then      
-                                tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(107, 1, 1)})      
+                                tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(18, 20, 128)})      
                                 library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})      
                             else      
                                 tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(20, 20, 20)})      
@@ -3536,7 +3538,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
     
                         local function update()      
                             if Element.value.Toggle then      
-                                tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(107, 1, 1)})      
+                                tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(18, 20, 128)})      
                                 library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})      
                             else      
                                 tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(20, 20, 20)})      
@@ -3792,7 +3794,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                         end) 
                         if data.default then 
                             if Element.value.Toggle then 
-                                tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(107, 1, 1)}) 
+                                tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(18, 20, 128)}) 
                                 library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)}) 
                             else 
                                 tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(20, 20, 20)}) 
@@ -3919,7 +3921,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                         Drop.MidImage = "http://www.roblox.com/asset/?id=6724808282" 
                         Drop.AutomaticCanvasSize = "Y" 
                         Drop.ZIndex = 5 
-                        Drop.ScrollBarImageColor3 = COL3RGB(107, 1, 1)
+                        Drop.ScrollBarImageColor3 = COL3RGB(18, 20, 128)
     
                         UIListLayout.Parent = Drop 
                         UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center 
@@ -3973,7 +3975,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                                     Drop.CanvasPosition = Vec2(0,0) 
                                 end) 
                                 Button.MouseEnter:Connect(function() 
-                                    library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 =  COL3RGB(107, 1, 1)}) 
+                                    library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 =  COL3RGB(18, 20, 128)}) 
                                 end) 
                                 Button.MouseLeave:Connect(function() 
                                     library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 =  COL3RGB(200, 200, 200)}) 
@@ -4083,7 +4085,7 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                         Frame.BorderSizePixel = 0 
                         Frame.Size = UDIM2(0.5, 0, 1, 0) 
     
-                        UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, COL3RGB(107, 1, 1)), ColorSequenceKeypoint.new(1, COL3RGB(107, 1, 1))} 
+                        UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, COL3RGB(18, 20, 128)), ColorSequenceKeypoint.new(1, COL3RGB(18, 20, 128))} 
                         UIGradient.Rotation = 90 
                         UIGradient.Parent = Frame 
     
@@ -4192,12 +4194,12 @@ TextLabel.Parent = KeybindList.TextLabel.Frame
                         end 
 
                         Button_2.MouseButton1Down:Connect(function() 
-                            TextLabel.TextColor3 = COL3RGB(107, 1, 1)
+                            TextLabel.TextColor3 = COL3RGB(18, 20, 128)
                             library:Tween(TextLabel, TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(200, 200, 200)}) 
                             callback() 
                         end) 
                         Button_2.MouseEnter:Connect(function() 
-                            library:Tween(TextLabel, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(107, 1, 1)}) 
+                            library:Tween(TextLabel, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(18, 20, 128)}) 
                         end) 
                         Button_2.MouseLeave:Connect(function() 
                             library:Tween(TextLabel, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(200, 200, 200)}) 
@@ -5680,8 +5682,8 @@ client:Element("ToggleColor", "hitmarker", {default = {Color = COL3RGB(255,255,2
 						ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 						
 						Frame.Parent = ScreenGui
-						Frame.BackgroundColor3 = Color3.fromRGB(107, 1, 1)
-						Frame.BorderColor3 = Color3.fromRGB(107, 1, 1)
+						Frame.BackgroundColor3 = Color3.fromRGB(18, 20, 128)
+						Frame.BorderColor3 = Color3.fromRGB(18, 20, 128)
 						Frame.Position = UDim2.new(0.0148920119, 0, 0.0208588839, 0)
 						Frame.Size = UDim2.new(0, 325, 0, 1)
 						
@@ -5697,7 +5699,7 @@ client:Element("ToggleColor", "hitmarker", {default = {Color = COL3RGB(255,255,2
 						TextLabel.Position = UDim2.new(0, 0, -0.055555556, 0)
 						TextLabel.Size = UDim2.new(0, 16, 0, 18)
 						TextLabel.Font = Enum.Font.SourceSans
-						TextLabel.Text = "E"
+						TextLabel.Text = "C"
 						TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 						TextLabel.TextSize = 14.000
 						TextLabel.TextStrokeTransparency = 0.000
@@ -5708,7 +5710,7 @@ client:Element("ToggleColor", "hitmarker", {default = {Color = COL3RGB(255,255,2
 						TextLabel_2.Position = UDim2.new(0.02610966, 0, -0.055555556, 0)
 						TextLabel_2.Size = UDim2.new(0, 12, 0, 18)
 						TextLabel_2.Font = Enum.Font.SourceSans
-						TextLabel_2.Text = "T"
+						TextLabel_2.Text = "W"
 						TextLabel_2.TextColor3 = Color3.fromRGB(179, 9, 9)
 						TextLabel_2.TextSize = 14.000
 						TextLabel_2.TextStrokeTransparency = 0.000
@@ -6475,7 +6477,7 @@ Frame.Size = UDim2.new(1,-20,1,-35)
 Frame.Position = UDim2.new(0,10,0,25)
 
 
-CreateHitElement("",Color3.new(1,1,0))
+CreateHitElement("checking whitelisted",Color3.new(1,1,0))
 
 
 local griefsector = grief:Sector("griefing","Left")
@@ -8768,7 +8770,7 @@ for _,Player in pairs(Players:GetPlayers()) do
 		end      
 	end      
 end      
-CreateHitElement("",Color3.new(0,1,0))
+CreateHitElement("made by muiiqwee!",Color3.new(0,1,0))
 
 print("")
 print("")
